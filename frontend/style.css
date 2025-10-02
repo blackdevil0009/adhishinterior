@@ -1,0 +1,208 @@
+/* ====== GLOBAL STYLING ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* ====== HEADER ====== */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  animation: fadeInDown 1s ease-in-out;
+}
+
+.logo img {
+  width: 60px;
+  height: auto;
+  margin-right: 15px;
+  filter: drop-shadow(0 0 8px cyan);
+}
+
+header h1 {
+  font-size: 2rem;
+  background: linear-gradient(90deg, #00ffe0, #ff00e0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px #00ffe0; }
+  to { text-shadow: 0 0 20px #ff00e0; }
+}
+
+/* ====== NAVIGATION ====== */
+a {
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: 500;
+  color: #fff;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: cyan;
+  text-shadow: 0 0 10px cyan;
+}
+
+/* ====== CARDS ====== */
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  border-radius: 15px;
+  margin: 20px auto;
+  padding: 20px;
+  width: 80%;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+  transition: transform 0.3s ease;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
+}
+
+.card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: cyan;
+}
+.card p, .card ul {
+      margin-bottom: 15px;
+    }
+
+    .card ul {
+      padding-left: 20px;
+    }
+
+    .image-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .image-grid img {
+      width: 200px;
+      height: 15px;
+      object-fit: cover;
+      border-radius: 12px;
+      filter: brightness(0.9) contrast(1.2);
+      transition: 0.5s;
+    }
+
+    .image-grid img:hover {
+      filter: brightness(1.1) contrast(1.3);
+      transform: scale(1.05);
+    }
+
+
+.card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-top: 15px;
+  filter: brightness(0.9) contrast(1.2);
+  transition: 0.5s;
+}
+
+.card img:hover {
+  filter: brightness(1.1) contrast(1.3);
+}
+
+/* ====== CONTACT FORM ====== */
+/* Contact Section */
+#contact {
+  text-align: center;          /* sab text center me */
+  display: flex;               /* flexbox use karke beech me laya */
+  flex-direction: column;      /* vertical arrange */
+  align-items: center;         /* horizontal center */
+  justify-content: center;     /* vertical center */
+  padding: 40px;
+}
+#contact h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: cyan;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 70%;
+  margin: 30px auto;
+}
+
+form input, form textarea {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+form button {
+  background: linear-gradient(90deg, cyan, magenta);
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #000;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+form button:hover {
+  box-shadow: 0 0 15px cyan;
+  transform: scale(1.05);
+}
+
+/* ====== FOOTER ====== */
+footer {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  text-align: center;
+  margin-top: 50px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+footer p, footer a {
+  margin: 8px 0;
+  color: #aaa;
+  text-decoration: none;
+}
+
+.notes p {
+  font-size: 0.9rem;
+  color: cyan;
+  margin: 5px 0;
+  font-style: italic;
+}
+
+/* ====== ANIMATIONS ====== */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
