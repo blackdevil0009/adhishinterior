@@ -1,15 +1,10 @@
-import mysql from "mysql2";
 
-const db = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "2007",
-  database: "contactdb"
-});
-
-db.connect(err => {
-  if (err) throw err;
-  console.log("✅ MySQL Connected!");
-});
-
-export default db;
+CREATE DATABASE contactdb;
+CREATE TABLE contacts (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100),
+    email VARCHAR(100),
+    phone VARCHAR(20),
+    message TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
