@@ -1,17 +1,10 @@
-import mysql from "mysql2";
-import dotenv from "dotenv";
-dotenv.config();
 
-const db = mysql.createConnection({
-  host: process.env.DB_HOST,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASSWORD,
-  database: process.env.DB_NAME
-});
-
-db.connect(err => {
-  if (err) throw err;
-  console.log("✅ MySQL Connected!");
-});
-
-export default db;
+CREATE DATABASE contactdb;
+CREATE TABLE contacts (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100),
+    email VARCHAR(100),
+    phone VARCHAR(20),
+    message TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
